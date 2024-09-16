@@ -1,0 +1,104 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and navigation styles */
+header {
+    background-color: #1a1919;
+    color: white;
+    padding: 10px 0;
+    width: 100%; /* Full-width header */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+nav a {
+    color: rgb(8, 173, 238);
+    text-decoration: none;
+}
+
+/* Home page centering excluding the nav */
+.home main {
+    height: calc(100vh - 60px); /* Adjust height based on header's height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack h1 and p vertically */
+    text-align: center;
+}
+
+.home h3 {
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.home h1 {
+    position: absolute;
+    top: 80px; /* Adjust this value to control how close it is to the top */
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #00796b; /* Darker shade for headings on home page */
+}
+
+/* Optional styling for other pages */
+.about {
+    background-color: #fff9c4; /* Light yellow for about page */
+}
+
+.about p {
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.about h1 {
+    color: #f57f17; /* Darker shade for headings on about page */
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.A_photo_of_me {
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.portfolio {
+    background-color: #f1f8e9; /* Light green for portfolio page */
+}
+
+.portfolio h1 {
+    color: #33691e; /* Darker shade for headings on portfolio page */
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.portfolio p {
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.portfolio h2 {
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.Graph {
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
+
+.Coding {
+    padding-left: 20px; /* Padding to move content from left edge */
+    padding-right: 20px; /* Padding to move content from right edge */
+}
