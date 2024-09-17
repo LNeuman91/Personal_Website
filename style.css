@@ -25,7 +25,13 @@ nav ul {
     margin: 0;
     align-items: end;    width: 100%;
     justify-content: flex-end; /* Keep items on the right */
+}
 
+/* Navigation styling */
+nav {
+    display: flex; /* Use flexbox for navigation items */
+    flex: 1; /* Allow nav to grow and fill available space */
+    justify-content: flex-end; /* Align links to the far right */
 }
 
 nav ul li.name {
