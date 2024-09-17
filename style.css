@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-bottom: 60px; /* Adjust this value to the height of your footer */
     background-color: #f4f4f4;
     color: #333;
 }
@@ -11,16 +11,31 @@ body {
 header {
     background-color: #1a1919;
     color: white;
-    padding: 10px 0;
+    height: 60px; /* Fixed height for consistency */
+    padding: 10px 0; /* Keep your current padding */
     width: 100%; /* Full-width header */
+    display: flex;
+    align-items: center; /* Vertically center the content */
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0 20px; /* Reduced padding for alignment */
     display: flex;
-    justify-content: space-around;
     margin: 0;
+    align-items: end;    width: 100%;
+    justify-content: flex-end; /* Keep items on the right */
+
+}
+
+nav ul li.name {
+    margin-right: auto; /* Push the name to the far left */
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li {
+    margin-left: 100px; /* Space between the page buttons */
 }
 
 nav a {
@@ -28,19 +43,36 @@ nav a {
     text-decoration: none;
 }
 
+
+
+
 /* Home page centering excluding the nav */
 .home main {
     height: calc(100vh - 60px); /* Adjust height based on header's height */
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: space-between; /* Space out text and image */
     align-items: center; /* Center vertically */
-    flex-direction: column; /* Stack h1 and p vertically */
-    text-align: center;
+    flex-direction: row; /* Ensure text and image are side by side */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add padding to prevent elements from touching the edges */
+}
+
+/* Style for the home image */
+.home-A_photo_of_me {
+    max-width: 300px; /* Adjust width as needed */
+    margin-left: 20px; /* Add margin between the text and the image */
 }
 
 .home h3 {
     max-width: 600px;
     line-height: 1.5;
+}
+
+.cursive-text {
+    font-family: 'Dancing Script', cursive;
+    text-align: left; /* Align text to the left */
+    margin-top: 80px; /* Adjust this value to move the text up */
+    max-width: 600px; /* Optionally set a max width to match the text-content width */
 }
 
 .home h1 {
@@ -66,11 +98,7 @@ nav a {
     color: #f57f17; /* Darker shade for headings on about page */
     padding-left: 20px; /* Padding to move content from left edge */
     padding-right: 20px; /* Padding to move content from right edge */
-}
-
-.A_photo_of_me {
-    padding-left: 20px; /* Padding to move content from left edge */
-    padding-right: 20px; /* Padding to move content from right edge */
+    border-bottom: 3px solid rgb(14, 99, 235); /* Adds a white line under the header */
 }
 
 .portfolio {
@@ -101,4 +129,93 @@ nav a {
 .Coding {
     padding-left: 20px; /* Padding to move content from left edge */
     padding-right: 20px; /* Padding to move content from right edge */
+}
+
+/* Bottom Navigation Bar Styles */
+footer {
+    background-color: #000; /* Black background for the footer */
+    padding: 10px 0; /* Adjust padding to be consistent */
+    width: 100%; /* Full-width footer */
+    position: fixed;
+    bottom: 0; /* Stick to the bottom of the page */
+    text-align: center; /* Center-align content */
+    z-index: 999; /* Ensure it stays on top of other content */
+}
+
+.bottom-nav ul {
+    list-style: none;
+    padding: 10;
+    margin: 10;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+}
+
+.bottom-nav li {
+    margin: 0; /* Remove default margin for list items */
+}
+
+.bottom-nav a {
+    text-decoration: none;
+}
+
+.linkedin-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Maintain aspect ratio */
+}
+
+
+/* Categories section styles */
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.category-image {
+    flex: 1;
+    text-align: right;
+}
+
+.category-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.category-item:nth-child(odd) .category-image {
+    order: 1;
+}
+
+.category-item:nth-child(even) .category-image {
+    order: 2;
+}
+
+/* Hiking image on the left */
+.category-item:nth-child(2) .category-image {
+    order: 1; /* Image comes first */
+    text-align: left; /* Align the image to the left */
+}
+
+.category-item:nth-child(2) .category-text {
+    order: 2; /* Text comes after the image */
+}
+
+/* Travel image on the right */
+.category-item:nth-child(3) .category-text {
+    order: 1; /* Text comes first */
+}
+
+.category-item:nth-child(3) .category-image {
+    order: 2; /* Image comes after the text */
+    text-align: right; /* Align the image to the right */
 }
